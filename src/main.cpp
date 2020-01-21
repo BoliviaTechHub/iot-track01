@@ -15,6 +15,8 @@
 #include <TinyGPS++.h>
 #define GPS_SERIAL Serial1
 
+#include "credentials.h"
+
 // GSM connection info.
 const char apn[] = "int.movil.com.bo"; // Access point name. Leave empty if it is not needed.
 const char gprsLogin[] = ""; // GPRS username. Leave empty if it is not needed.
@@ -22,9 +24,9 @@ const char gprsPassword[] = ""; // GPRS password. Leave empty if it is not neede
 const char pin[] = ""; // SIM pin number. Leave empty if it is not needed.
 
 // Cayenne authentication info. This should be obtained from the Cayenne Dashboard.
-const char username[] = "username";
-const char password[] = "password";
-const char clientID[] = "clientID";
+const char username[] = CAYENNE_USERNAME;
+const char password[] = CAYENNE_PASSWORD;
+const char clientID[] = CAYENNE_CLIENTID;
 
 // The TinyGPS++ object
 TinyGPSPlus gps;
